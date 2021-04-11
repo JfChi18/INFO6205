@@ -3,15 +3,19 @@ class Solution {
         if(s == null || s.length() == 0) {
             return "";
         }
-        
-        String[] words = s.split(" ");
-        StringBuffer sb = new StringBuffer();
-        
-        for(int i = words.length - 1; i >=0; i--) {
-                sb.append(words[i]);
-                sb.append(" ");
+        StringBuffer result = new StringBuffer();
+        for(int i = s.length() - 1; i >= 0; i--) {
+            if(s.charAt(i) == ' ') {
+                continue;
+            };
+            
+            int end = i;
+            while(i >= 0 && s.charAt(i) != ' ') {
+                i--;
+            }
+            result.append(s.substring(i + 1, end + 1)).append(" ");
         }
-        
-        return sb.toString().trim();
+        return result.toString().trim();
     }
 }
+
