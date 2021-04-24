@@ -34,10 +34,13 @@ public class Solution{
         return count == numCourses;
     }
  public static void main(String[] args){
-    	int[][] prerequisites= {{1,0}};
+     /*Input: numCourses = 2, prerequisites = [[1,0],[0,1]]
+       Output: false*/
+        int numCourses = 2;
+    	int[][] prerequisites= {{1,0},{0,1}};
     	
         Solution soln = new Solution();
-    	System.out.println(soln.canFinish(2, prerequisites));
+    	System.out.println(soln.canFinish(numCourses, prerequisites));
     
      }
 }
