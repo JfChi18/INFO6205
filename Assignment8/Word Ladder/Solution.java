@@ -1,9 +1,8 @@
 public class Solution {
         public int ladderLength(String beginWord, String endWord, List<String> wordList) {
-        // Regular BFS solution
-        // first convert wordList to set to save time for removing and searching
+
         Set<String> words = new HashSet<>(wordList);
-        // check edge case
+
         if (beginWord.length() != endWord.length() || !words.contains(endWord))
             return 0;
         int level = 1;
@@ -48,7 +47,7 @@ public class Solution {
      Solution soln = new Solution();
         String beginWord = "hit";
         String endWord = "cog";
-        System.out.print("Output:" + soln.ladderLength(beginWord, endWord, wordlist));
+        System.out.print(soln.ladderLength(beginWord, endWord, wordlist));
     
      }
 
