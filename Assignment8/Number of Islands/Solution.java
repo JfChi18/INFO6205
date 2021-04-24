@@ -1,4 +1,4 @@
-class Solution {
+public class Solution {
     public int numIslands(char[][] grid) {
         int count = 0;
         if (grid == null || grid.length == 0) 
@@ -25,9 +25,15 @@ class Solution {
         isIsland(r, c + 1, grid);
         isIsland(r, c - 1, grid);
     }
-public static void main(String[] args){
-    	char[][] list= {{'1','1','1','1','0'},{'1','1','0','1','0'},{'1','1','0','0','0'},{'0','0','0','0','0'}};
-    	Solution soln = new Solution();
+
+public static void main(String[] args){    	
+    	char[][] list = {
+                {'1','1','0','0','0'},
+                {'1','1','0','0','0'},
+                {'0','0','1','0','0'},
+                {'0','0','0','1','1'}
+        };
+        Solution soln = new Solution();
     	System.out.println(soln.numIslands(list));
     	
     	}
