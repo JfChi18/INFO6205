@@ -1,6 +1,5 @@
 public class Solution{
-    // BFS, delete the indgree = 0 courses 1 by 1, until not doable, 
-    // check if courses deleted = total course number
+
     public boolean canFinish(int numCourses, int[][] prerequisites) {
         if (prerequisites == null || prerequisites.length == 0)
             return true;
@@ -37,7 +36,7 @@ public class Solution{
  public static void main(String[] args){
     	int[][] prerequisites= {{1,0}};
     	
-      Solution soln = new Solution();
+        Solution soln = new Solution();
     	System.out.println(soln.canFinish(2, prerequisites));
     
      }
